@@ -1,4 +1,4 @@
-name: template-rename
+name: rename
 on:
   workflow_dispatch:
   push:
@@ -14,5 +14,5 @@ jobs:
           from-name: template
           to-name: ${{ github.repository }}
           pr-branch: renamer
-          paths-ignore: "dist/"
+          paths-ignore: ".github/ gradle/wrapper"
           dry-run: true

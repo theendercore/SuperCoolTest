@@ -14,7 +14,5 @@ jobs:
           from-name: template
           to-name: ${{ github.repository }}
           pr-branch: renamer
-          paths-ignore:
-            - 'dist/'
-            - 'node_modules/'
+          paths-ignore: "dist/"
           dry-run: true

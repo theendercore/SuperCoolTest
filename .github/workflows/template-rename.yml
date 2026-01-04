@@ -1,0 +1,20 @@
+name: template-rename
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: kota65535/github-template-rename-action@v1
+        with:
+          from-name: template
+          to-name: ${{ github.repository }}
+          pr-branch: renamer
+          paths-ignore:
+            - 'dist/'
+            - 'node_modules/'
+          dry-run: true

@@ -14,5 +14,5 @@ jobs:
           from-name: template
           to-name: ${{ github.repository }}
           pr-branch: renamer
-          paths-ignore: ".github/ gradle/wrapper"
+          paths-ignore: ".github/"
           dry-run: true
